@@ -1,0 +1,88 @@
+/* Zera a margem e o padding de todos os elementos para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define o layout do corpo da página como flexbox e centraliza os itens */
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://cdn.pixabay.com/photo/2021/09/16/08/56/leaves-6629581_1280.png);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.titulo {
+    font-size: 42px;
+    font-weight: 900;
+    margin: 20px 0; 
+    text-align: center;
+    color: #000
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #def5dd, #bbe8f7);
+    padding: 70px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Largura máxima */
+}
+
+.formulario label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.formulario input {
+    margin-top: 5px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+/* Remove o contorno (outline) dos inputs ao focar */
+.formulario input:focus {
+    outline: none;
+}
+
+/* Remove os botões de incremento/decremento dos inputs numéricos no Webkit */
+.formulario input::-webkit-outer-spin-button,
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+button {
+    background-color: #2a45be;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estiliza o botão ao passar o mouse */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Estiliza o botão ao clicar */
+button:active {
+    background-color: #3e8e41;
+    transform: scale(1);
+}
+
+.mensagem {
+    margin-top: 20px;
+    font-size: 18px;
+    min-height: 23px;
+}
